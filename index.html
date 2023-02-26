@@ -9,6 +9,7 @@
     <title>Sign Up | CatchLog</title>
 </head>
 <body>
+
     <div id="header">
         <img src="" alt="logo">
         <div id="welcome">
@@ -17,10 +18,44 @@
         </div>
         <button id="signin">Sign In</button>
     </div>
-    <div>
-        <form action="example.com">
-            <h2>Create and Account</h2>
-        </form>
+    <div id="main">
+        <div id="signupform">
+            <h2>Create an Account</h2>
+            <form action="example.com">
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Your real name">
+            <label for="user_name">User Name:</label>
+            <input type="text" name="user_name" id="user_name">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="example@email.com">
+            <br>
+            <label for="password">Set a Password:</label>
+            <input type="password" name="password" id="password">
+            <br>
+            <label for="passconfirm">Confirm Password:</label>
+            <input type="password" name="password" id="passconfirm">
+            <br>
+            <input type="checkbox" name="check">
+            <label for="check">By checking this box and clicking the create account button below, you are certifying you have read and agree to the Terms and Conditions as well as our Privacy Policy</label>
+            <br>
+            <button type="submit">Create Account</button>
+            </form>
+        </div>
+        <div id="reviews">
+            <h2>Check our Reviews</h2>
+            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque rem enim itaque magni non temporibus, voluptas harum! Eum facere magnam voluptatum fugit eligendi placeat dolores, iste ipsum iusto nostrum qui!"</p>
+            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque rem enim itaque magni non temporibus, voluptas harum!"</p>
+
+        </div>
     </div>
+    <div id="footer">
+        <p>About</p>
+        <p>Terms of Service</p>
+        <p>Privacy Policy</p>
+        <p>Contact</p>
+    </div>
+
 </body>
 </html>

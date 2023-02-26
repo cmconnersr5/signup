@@ -1,23 +1,16 @@
-body{
-    background-image: url('./images/trout.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+#main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 100vh;
 }
 
-#header{
+
+#footer, #header{
     display: flex;
     justify-content: space-around;
-    background-color: hsla(112, 62%, 25%, 0.616);
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
+    align-items: center;
+    background-color: rgba(4, 82, 4, 0.568);
     color: antiquewhite;
-}
-
-button{
-    max-height: fit-content;
 }
 
 #welcome{
@@ -26,3 +19,15 @@ button{
     align-items: center;
 }
 
+#signupform{
+    background-image: url(./images/trout.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+#reviews{
+    background-color: rgba(4, 82, 4, 0.568);
+    color: antiquewhite;
+
+}
