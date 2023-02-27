@@ -79,4 +79,5 @@ input{
 button {
     height: 2rem;
     font-size: 20px;
+    min-width: fit-content;
 }
