@@ -1,10 +1,12 @@
 body{
-    background-color: rgb(55, 141, 55);
+    background-image: url(./images/trout.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
 }
 
 #main{
     display: grid;
-    grid-template-columns: 3fr 1fr;
     height: 100vh;
 }
 
@@ -14,40 +16,42 @@ body{
     justify-content: space-around;
     align-items: center;
     color: antiquewhite;
+    flex-shrink: 0;
 }
 
-#header{
-    border-bottom: 3px antiquewhite;
-    border-bottom-style: solid;
-}
 
 #welcome{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+#welcome h1{
+    font-size: 5rem;
+    margin-bottom: 5px;
+}
+#welcome h3 {
+    margin-top: 5px;
 }
 
 #signupform{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-image: url(./images/trout.jpg);
-    background-size: cover;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
 }
 h2{
     color: antiquewhite;
     margin-top: 25px;
+    font-size: 50px;
 }
 
-#reviews{
-    color: antiquewhite;
-    border-bottom: 3px antiquewhite;
-}
 
 #names{
     display: flex;
+    justify-content: center;
+
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -58,16 +62,21 @@ form{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(245, 245, 245, 0.651);
+    background-color: rgba(245, 245, 245, 0.85);
     border-radius: 10px;
     padding: 15px;
-    width: 45%;
-    height: 80%;
+    width: 35%;
+    height: 60%;
 }
 
-input, button{
-  width: 150px;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+input{
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+button {
+    height: 2rem;
+    font-size: 20px;
 }
