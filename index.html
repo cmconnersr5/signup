@@ -19,16 +19,18 @@
     </div>
     <div id="main">
         <div id="signupform">
-            <h2>Create an Account</h2>
             <form action="example.com">
+            <h2>Create an Account</h2>
             <div id="names">
-            <input required type="text" name="name" placeholder="Full Name">
-            <input required type="text" name="user_name"id="user_name" placeholder="Create Username">
+            <input required type="text" name="name" placeholder="Full Name" pattern=[A-Za-z ]>
+            <input required type="text" name="user_name" id="user_name" placeholder="Create Username"
+                minlength="5" maxlength="15" pattern=[A-Za-z\d_]{5,15}>
             </div>
             <br>
             <input required type="email" name="email" id="email" placeholder="Enter your Email address">
             <br>
-            <input required type="password" name="password" id="password" placeholder="Create Password">
+            <input required type="password" name="password" id="password" placeholder="Create Password"
+            minlength="8" maxlength="12" pattern=[A-Za-z_1-9!@#$)()]>
             <label for="password">Create a password which meets the following Criteria</label>
             <p>Between 8-12 characters in length</p>
             <br>
