@@ -22,19 +22,21 @@
             <form action="example.com">
             <h2>Create an Account</h2>
             <div id="names">
-            <input required type="text" name="name" placeholder="Full Name" pattern=[A-Za-z ]>
+            <input required type="text" name="name" placeholder="Full Name" pattern=[A-Za-z\s]+[A-Za-z]+>
             <input required type="text" name="user_name" id="user_name" placeholder="Create Username"
-                minlength="5" maxlength="15" pattern=[A-Za-z\d_]{5,15}>
+                minlength="5" maxlength="15" pattern= \w+\_*\d*{5,15}>
             </div>
             <br>
             <input required type="email" name="email" id="email" placeholder="Enter your Email address">
             <br>
             <input required type="password" name="password" id="password" placeholder="Create Password"
-            minlength="8" maxlength="12" pattern=[A-Za-z_1-9!@#$)()]>
+            minlength="8" maxlength="12" pattern=[A-Za-z_1-9!@#$)()]+>
             <label for="password">Create a password which meets the following Criteria</label>
             <p>Between 8-12 characters in length</p>
+            //add dynamically matching rules window
             <br>
             <input required type="password" name="password" id="passconfirm" placeholder="Confirm Password">
+            //add match logic
             <br>
             <label>By clicking the "Create Account" button below, you are certifying you have read and agree to the Terms and Conditions as well as our Privacy Policy</label>
             <br>
