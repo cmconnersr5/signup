@@ -18,17 +18,12 @@ function validate(){
 
 password.onchange = validate;
 passConf.onchange = validate;
-// password.onchange = conditions;
 
-// function conditions(){
-//     console.log(password.length)
-//     if(password.textContent.length > 8 && password.textContent.length < 12){
-//         document.getElementById('passCond1').style.color="red";
-//     } else {
-//         document.getElementById('passCond1').style.color="green";
-//     }
-
-
+let close = document.getElementById('closeButton')
+close.addEventListener('click', closeFunc)
+function closeFunc(){
+    document.getElementById('login_modal').style.visibility="hidden";
+}
 
 
 

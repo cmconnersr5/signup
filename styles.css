@@ -96,10 +96,15 @@ input{
     padding: 5px;
 }
 
+input:valid{
+    border-color: green;
+}
+
 button {
     height: 2rem;
     font-size: 20px;
     min-width: fit-content;
+    cursor: pointer;
 }
 
 .tooltip{
@@ -138,6 +143,20 @@ button {
     z-index: 1;
 }
 
-input:valid{
-    border-color: green;
+#login_modal h2{
+    font-family: customFont, Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+#login_modal #closeButton {
+    position: fixed;
+    width: max-content;
+    background-color: rgba(245, 245, 245, 0.95);
+    border: 20px solid;
+    border-color: rgba(245, 245, 245, 0.95);
+    border-radius: 100px;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
 }
