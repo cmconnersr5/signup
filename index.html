@@ -19,29 +19,42 @@
     </div>
     <div id="main">
         <div id="signupform">
-            <form action="example.com">
+            <form action="example.url">
             <h2>Create an Account</h2>
             <div id="names">
-            <input required type="text" name="name" placeholder="Full Name" pattern=[A-Za-z\s]+[A-Za-z]+>
-            <input required type="text" name="user_name" id="user_name" placeholder="Create Username"
-                minlength="5" maxlength="15" pattern= \w+\_*\d*{5,15}>
+            <input required type="text" name="name" placeholder="Full Name" title="Enter First and Last Name" pattern=^([\w]{2,}\s[\w]{1,}'?-?[\w]{2,}\s?([\w]{1,})?)>
+            <input required type="text" name="user_name" id="user_name" placeholder="Create Username" title="Username may contain '_' as well as numbers and letters"
+                minlength="5" maxlength="15" pattern= [\w+_*\d*]{5,15}>
+            <label for="user_name">Username may contain '_' as well as numbers and letters</label>
             </div>
             <br>
-            <input required type="email" name="email" id="email" placeholder="Enter your Email address">
+            <input required type="email" name="email" id="email" placeholder="Enter your Email address" title="example@email.com">
             <br>
+            <div class="tooltip">
             <input required type="password" name="password" id="password" placeholder="Create Password"
-            minlength="8" maxlength="12" pattern=[A-Za-z_1-9!@#$)()]+>
-            <label for="password">Create a password which meets the following Criteria</label>
-            <p>Between 8-12 characters in length</p>
-            //add dynamically matching rules window
+            minlength="8" maxlength="12" pattern=^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#!%*?&])[A-Za-z\d@#$!%*?&]{8,12}$>
+            <span class="tooltiptext">Password must: <br> 
+            Contain 8-12 characters <br>
+            Contain upper and lowercase<br>
+            Contain atleast one of the following - !@#$()[] <br>
+            Contain atleast one number</span>
+            </div>
             <br>
-            <input required type="password" name="password" id="passconfirm" placeholder="Confirm Password">
-            //add match logic
+            <input required type="password" name="password" id="passConf" placeholder="Confirm Password">
             <br>
             <label>By clicking the "Create Account" button below, you are certifying you have read and agree to the Terms and Conditions as well as our Privacy Policy</label>
             <br>
-            <button type="submit">Create Account</button>
+            <button id="sumbit">Create Account</button>
             </form>
+            
+            <div id="login_modal">
+            <form action="example.url">
+            <label for="login_name">User Name</label>
+            <input type="text" name="login_name" id="login">
+            <label for="login_password">Password</label>
+            <input type="password" name="login_password" id="logPass">
+            </form>
+            </div>
         </div>
 
     </div>
